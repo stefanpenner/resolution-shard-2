@@ -1,0 +1,9 @@
+name: 'Shard 2 Composite'
+description: 'Composite from shard 2 referencing other shards'
+runs:
+  using: 'composite'
+  steps:
+    - uses: stefanpenner/resolution-shard-3/leaf@main
+    - uses: stefanpenner/resolution-shard-7/leaf@main
+    - run: echo "shard-2/composite done"
+      shell: bash
